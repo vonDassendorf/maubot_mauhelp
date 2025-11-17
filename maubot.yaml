@@ -1,6 +1,6 @@
 maubot: 0.3.1
 id: se.skeg1.mauhelp
-version: 0.2.0
+version: 0.3.0
 license: MIT
 modules:
   - mauhelp
