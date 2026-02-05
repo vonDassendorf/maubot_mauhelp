@@ -7,7 +7,7 @@ class MauHelp(Plugin):
     @command.new(name="help", help="Shows this help text")
     async def help(self, evt: MessageEvent):
         help_text_dict = {}
-        for handler_func, _ in self.client.event_handlers[EventType.ROOM_MESSAGE]:
+        for handler_func in self.client.event_handlers[EventType.ROOM_MESSAGE]:
             command_help = ""
             if hasattr(handler_func, "__mb_name__") and hasattr(handler_func, "__mb_usage_inline__"):
                 # Initialize the key if it doesn't exist
